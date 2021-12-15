@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="5dp"
+    android:layout_marginTop="15dp"
+    android:layout_marginEnd="5dp"
+    android:orientation="vertical"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="8dp"
+    android:id="@+id/newPetItemCard">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_item"
+            android:elevation="5dp"
+            android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/imgPetImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:usesCleartextTraffic="true"
+                            tools:ignore="ContentDescription" />
+
+                        <com.like.LikeButton
+                            android:id="@+id/star_button"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="right"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            app:anim_scale_factor="2"
+                            app:icon_size="20dp"
+                            app:icon_type="heart"
+                            app:liked="false" />
+                </FrameLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvPetName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/nunito_bold"
+                            android:gravity="center"
+                            android:lineSpacingExtra="0dp"
+                            tools:text="@string/txt_pet_name"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:id="@+id/tvPetBreed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="5dp"
+
+                            android:fontFamily="@font/nunito_regular"
+                            android:lineSpacingExtra="0dp"
+                            tools:text="@string/txt_pet_breed"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/tvDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:fontFamily="@font/nunito_regular"
+                            android:lineSpacingExtra="0dp"
+                            tools:text="@string/txt_duration"
+                            android:textSize="15sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="5dp">
+
+                                <Button
+                                    android:id="@+id/btnEdit"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:fontFamily="@font/nunito_bold"
+                                    android:text="@string/txt_editPet"
+                                    android:textSize="13sp"/>
+
+                                <Button
+                                    android:id="@+id/btnRemove"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="5dp"
+                                    android:fontFamily="@font/nunito_bold"
+                                    android:text="@string/txt_remove"
+                                    android:backgroundTint="@color/blue"
+                                    android:textSize="13sp"
+                                    android:layout_marginStart="5dp"/>
+
+
+
+
+
+                        </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+</androidx.cardview.widget.CardView>

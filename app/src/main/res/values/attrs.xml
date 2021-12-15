@@ -1,0 +1,24 @@
+<resources>
+    <declare-styleable name="AppWidgetAttrs">
+        <attr name="appWidgetPadding" format="dimension" />
+        <attr name="appWidgetInnerRadius" format="dimension" />
+        <attr name="appWidgetRadius" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="ScannerOverlay">
+        <attr name="square_width" format="dimension">
+            <enum name="match_parent" value="-1" />
+            <enum name="wrap_content" value="-2" />
+        </attr>
+        <attr name="square_width1" format="integer" />
+        <attr name="square_height1" format="integer" />
+        <attr name="square_height" format="dimension" />
+        <attr name="square_top" format="dimension" />
+        <attr name="square_left" format="dimension" />
+        <attr name="square_margin_left" format="dimension" />
+        <attr name="square_margin_right" format="dimension" />
+        <attr name="line_color" format="color" />
+        <attr name="line_width" format="integer" />
+        <attr name="line_speed" format="integer" />
+    </declare-styleable>
+</resources>

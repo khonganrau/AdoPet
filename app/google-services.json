@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1057384834674",
+    "project_id": "adopet-5086d",
+    "storage_bucket": "adopet-5086d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1057384834674:android:582f5c4c3304ef6af7c4eb",
+        "android_client_info": {
+          "package_name": "com.example.adoption_pet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1057384834674-h1c7h24gq5kjcgfm2sr6051nk46s3b85.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANhXREwQjcTjtTgiC3gjfTtGRsy8T-Qak"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1057384834674-h1c7h24gq5kjcgfm2sr6051nk46s3b85.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

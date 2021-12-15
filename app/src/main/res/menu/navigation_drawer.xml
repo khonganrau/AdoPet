@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/itemPets"
+            android:icon="@drawable/itemmenu_pets"
+            android:title="@string/txt_itemmenu_Pets"
+            android:contentDescription="@string/txt_content_description_pets"
+            android:checked="true"
+            />
+        <item
+            android:id="@+id/itemFavorites"
+            android:icon="@drawable/itemmenu_favorites"
+            android:title="@string/txt_itemmenu_Favorites"
+            android:contentDescription="@string/txt_content_description_favorites"/>
+
+        <item
+            android:id="@+id/itemMyPets"
+            android:icon="@drawable/itemmenu_mypets"
+            android:title="@string/txt_itemmenu_MyPets"
+            android:contentDescription="@string/txt_content_description_myPets"/>
+
+    </group>
+    <group
+        android:id="@+id/group_communication"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/itemMessages"
+            android:icon="@drawable/ic_baseline_call_24"
+            android:title="@string/txt_itemmenu_Call"
+            android:contentDescription="@string/txt_content_description_messages"/>
+
+        <item
+            android:id="@+id/itemAboutApp"
+            android:icon="@drawable/ic_baseline_info_24"
+            android:title="@string/txt_itemmenu_AboutApp"
+            android:contentDescription="@string/txt_content_description_abouApp"/>
+
+    </group>
+    <group
+        android:id="@+id/group_user"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/itemMyProfile"
+            android:icon="@drawable/ic_baseline_account_circle_24"
+            android:title="@string/txt_itemmenu_myProfile"
+            android:contentDescription="@string/txt_content_description_myProfile"/>
+
+        <item
+            android:id="@+id/itemChangePassword"
+            android:icon="@drawable/ic_baseline_lock"
+            android:title="@string/txt_itemmenu_changePassword"
+            android:contentDescription="@string/txt_content_description_changePassword"/>
+
+    </group>
+
+    <group>
+
+        <item
+            android:id="@+id/itemSetting"
+            android:icon="@drawable/ic_baseline_dark_mode_setting"
+            android:title="@string/txt_item_dark_mode"
+            android:contentDescription="@string/txt_content_description_messages"/>
+
+    </group>
+
+    <group
+        android:id="@+id/group_signOut"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/itemSignOut"
+            android:icon="@drawable/ic_baseline_login_24"
+            android:title="@string/txt_itemmenu_SignOut" />
+
+    </group>
+</menu>

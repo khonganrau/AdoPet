@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:openDrawer="start">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/bar"
+                style="@style/Widget.MaterialComponents.ActionBar.PrimarySurface"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:background="@color/pink"
+                android:fitsSystemWindows="true">
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_scanner_qr_code"
+                    android:fontFamily="@font/nunito_extrabold"
+                    android:textColor="@color/blue"
+                    android:textSize="25sp"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/scanTitle"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_scanner_subTitle"
+                    android:fontFamily="@font/nunito_regular"
+                    android:textColor="@color/gray_64"
+                    android:textSize="15sp"
+                    android:gravity="center_horizontal"
+                    android:layout_below="@+id/scanTitle"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:id="@+id/scanSubtitle"/>
+
+                <ImageView
+                    android:id="@+id/qrScanImgCheck"
+                    android:layout_width="@dimen/_200sdp"
+                    android:layout_height="@dimen/_200sdp"
+                    android:layout_below="@+id/scanSubtitle"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_40sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:src="@drawable/qricon" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilCode"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:hint="@string/txt_input_code"
+                        app:boxStrokeColor="@color/pink"
+                        app:boxStrokeErrorColor="@color/red_error"
+                        app:boxStrokeWidth="1dp"
+                        app:counterMaxLength="100"
+                        app:endIconMode="clear_text"
+                        app:hintTextColor="@color/pink"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:layout_below="@+id/qrScanImgCheck"
+                        app:boxBackgroundColor="@color/white"
+                        android:enabled="true"
+                        android:layout_marginTop="@dimen/_20sdp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtCode"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/nunito_regular"
+                            android:inputType="text"
+                            android:scrollbars="horizontal" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <Button
+                    android:id="@+id/btnJoin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tilCode"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:text="@string/txt_btnJoin"
+                    android:fontFamily="@font/nunito_bold"
+                    android:layout_centerHorizontal="true"
+                    android:enabled="true"/>
+
+
+
+
+            </RelativeLayout>
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/topAppBar"
+                style="@style/Widget.MaterialComponents.Toolbar.PrimarySurface"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@android:color/transparent"
+                android:elevation="0dp"
+                app:layout_anchor="@+id/bar"
+                app:layout_anchorGravity="center"
+                app:title="@string/txt_itemmenu_Call"
+                app:titleCentered="true" />
+
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigationView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/header_navigation_drawer"
+            app:menu="@menu/navigation_drawer" />
+
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+
+</RelativeLayout>

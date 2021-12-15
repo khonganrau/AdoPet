@@ -1,0 +1,886 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.View.CreatePetActivity">
+
+    <include
+        android:id="@+id/toobarCreate"
+        layout="@layout/toolbar" />
+
+
+
+    <ScrollView
+        android:id="@+id/create_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toobarCreate">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+            <!-- Type-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioGroup
+                    android:id="@+id/rgType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rbtnCat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="40dp"
+                        android:background="@drawable/cat_type"
+                        android:gravity="center" />
+                    <!--                    TODO if you want to enable circle then open below-->
+                    <!--                        android:button="@null" -->
+                    />
+
+                    <RadioButton
+                        android:id="@+id/rbtnDog"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/dog_type" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/errorType"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/nunito_regular"
+                    android:gravity="center"
+                    android:paddingTop="5dp"
+                    android:text="@string/rbtn_nonselect"
+                    android:textColor="@color/red_error"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+
+            <!--Breeds-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilBreed"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/pink"
+                android:hint="@string/txt_pet_breed"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeColor="@color/pink"
+                app:boxStrokeErrorColor="@color/red_error"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="2dp"
+                app:endIconMode="dropdown_menu"
+                app:errorEnabled="true"
+                app:helperText="@string/helper_txt_breed"
+                app:helperTextEnabled="false"
+                app:helperTextTextColor="@color/white"
+                app:hintTextColor="@color/pink">
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/mactvBreed"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:cursorVisible="false"
+                    android:editable="false"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:fontFamily="@font/nunito_regular"
+                    android:inputType="none"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    tools:ignore="Deprecated" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Image-->
+            <TextView
+                android:id="@+id/tvImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/nunito_semibold"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:text="@string/pet_image_lable"
+                android:textColor="@color/blue"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/imgPet"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/ic_baseline_add_photo_alternate_24"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/errorImg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_regular"
+                android:gravity="center"
+                android:text="@string/txt_error_null_uri"
+                android:textColor="@color/red_error"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <!--Name-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilName"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/pink"
+                android:hint="@string/txt_pet_name"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="20dp"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeColor="@color/pink"
+                app:boxStrokeErrorColor="@color/red_error"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="2dp"
+                app:counterEnabled="true"
+                app:counterMaxLength="100"
+                app:counterTextColor="@color/white"
+                app:endIconMode="clear_text"
+                app:errorEnabled="true"
+                app:hintEnabled="true"
+                app:hintTextColor="@color/pink">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/petName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <!--Dob-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilDob"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/pink"
+                android:hint="@string/hnt_pet_dob"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeColor="@color/pink"
+                app:boxStrokeErrorColor="@color/red_error"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="2dp"
+                app:counterMaxLength="100"
+                app:endIconMode="clear_text"
+                app:errorEnabled="true"
+                app:hintTextColor="@color/pink"
+                app:startIconDrawable="@drawable/ic_baseline_calendar_today_24">
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/petDob"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:cursorVisible="false"
+                    android:focusableInTouchMode="false"
+                    android:fontFamily="@font/nunito_regular"
+                    android:inputType="none"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Gender and Sterilization fields-->
+            <LinearLayout
+                android:id="@+id/genAndSteri"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/pink"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_gender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/nunito_bold"
+                        android:text="@string/txt_gender"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        tools:ignore="NestedWeights" />
+
+
+                    <RadioGroup
+                        android:id="@+id/rgGender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/white">
+
+                        <!--Female-->
+                        <RadioButton
+                            android:id="@+id/rbtnFemale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/pink"
+                            android:fontFamily="@font/nunito_regular"
+                            android:text="@string/txt_gender_female"
+                            android:textColor="@color/blue"
+                            android:textSize="15sp" />
+
+                        <!--Male-->
+                        <RadioButton
+                            android:id="@+id/rbtnMale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/pink"
+                            android:fontFamily="@font/nunito_regular"
+                            android:text="@string/txt_gender_male"
+                            android:textColor="@color/blue"
+                            android:textSize="15sp" />
+
+
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/errorGender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/nunito_regular"
+                        android:paddingTop="5dp"
+                        android:text="@string/rbtn_nonselect"
+                        android:textColor="@color/red_error"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_sterilization"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/nunito_bold"
+                        android:text="@string/txt_sterilization"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        tools:ignore="NestedWeights" />
+
+                    <RadioGroup
+                        android:id="@+id/rgSterilized"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/white">
+
+                        <!--Yes-->
+                        <RadioButton
+                            android:id="@+id/rbtnYes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/pink"
+                            android:fontFamily="@font/nunito_regular"
+                            android:text="@string/txt_ster_yes"
+                            android:textColor="@color/blue"
+                            android:textSize="15sp" />
+
+                        <!--No-->
+                        <RadioButton
+                            android:id="@+id/rbtnNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/pink"
+                            android:fontFamily="@font/nunito_regular"
+                            android:text="@string/txt_ster_no"
+                            android:textColor="@color/blue"
+                            android:textSize="15sp" />
+
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/errorSterilization"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/nunito_regular"
+                        android:paddingTop="5dp"
+                        android:text="@string/rbtn_nonselect"
+                        android:textColor="@color/red_error"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--Description-->
+            <TextView
+                android:id="@+id/txt_des_lable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/pink"
+                android:fontFamily="@font/nunito_bold"
+                android:paddingStart="20dp"
+                android:text="@string/txt_description_lable"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:drawableEndCompat="@drawable/ic_baseline_edit_24_white"
+                tools:ignore="RtlSymmetry"
+                android:paddingEnd="20dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilDes"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/pink"
+                android:hint="@string/txt_description"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="20dp"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeColor="@color/pink"
+                app:boxStrokeErrorColor="@color/red_error"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="2dp"
+                app:counterEnabled="true"
+                app:counterMaxLength="3000"
+                app:counterTextColor="@color/white"
+                app:endIconMode="clear_text"
+                app:errorEnabled="true"
+                app:hintEnabled="true"
+                app:hintTextColor="@color/pink">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/petDes"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:focusableInTouchMode="true"
+                    android:inputType="textMultiLine"
+                    android:scrollbars="vertical" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <!-- Address -->
+            <TextView
+                android:id="@+id/txt_address_lable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/pink"
+                android:fontFamily="@font/nunito_bold"
+                android:paddingStart="20dp"
+                android:text="@string/txt_address_lable"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:drawableEndCompat="@drawable/ic_baseline_location_on_24"
+                tools:ignore="RtlSymmetry"
+                android:paddingEnd="20dp"/>
+
+            <!--Provinces & cities-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilPetCity"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/pink"
+                android:hint="@string/txt_province_city"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="20dp"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeColor="@color/pink"
+                app:boxStrokeErrorColor="@color/red_error"
+                app:boxStrokeWidth="0dp"
+                app:endIconMode="clear_text"
+                app:errorEnabled="true"
+                app:hintTextColor="@color/pink">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/petCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:fontFamily="@font/nunito_regular"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- District-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_dist"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/pink"
+                android:hint="@string/txt_district"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeColor="@color/pink"
+                app:boxStrokeErrorColor="@color/red_error"
+                app:boxStrokeWidth="0dp"
+                app:endIconMode="dropdown_menu"
+                app:errorEnabled="true"
+                app:hintTextColor="@color/pink">
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/petDistrict"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:fontFamily="@font/nunito_regular"
+                    android:inputType="none"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--House number -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_hNumber"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/pink"
+                android:hint="@string/txt_houseNumber"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="20dp"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeColor="@color/pink"
+                app:boxStrokeErrorColor="@color/red_error"
+                app:boxStrokeWidth="0dp"
+                app:endIconMode="clear_text"
+                app:errorEnabled="true"
+                app:hintTextColor="@color/pink">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/houseNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:fontFamily="@font/nunito_regular"
+                    android:inputType="text"
+                    android:scrollbars="horizontal"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Pet Properties-->
+            <TextView
+                android:id="@+id/tv_property"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/pink"
+                android:fontFamily="@font/nunito_bold"
+                android:paddingStart="20dp"
+                android:paddingTop="15dp"
+                android:paddingEnd="20dp"
+                android:text="@string/txt_petProperties"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:drawableEndCompat="@drawable/ic_baseline_pets_24" />
+
+            <!--Large Size-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilSize"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/pink"
+                android:hint="@string/txt_large_size"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="20dp"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeColor="@color/pink"
+                app:boxStrokeErrorColor="@color/red_error"
+                app:boxStrokeWidth="0dp"
+                app:endIconMode="dropdown_menu"
+                app:errorEnabled="true"
+                app:hintTextColor="@color/pink">
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/size"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/nunito_regular"
+                    android:inputType="none"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Ager-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilAger"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/pink"
+                android:hint="@string/txt_age"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="20dp"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeColor="@color/pink"
+                app:boxStrokeErrorColor="@color/red_error"
+                app:boxStrokeWidth="0dp"
+                app:endIconMode="dropdown_menu"
+                app:errorEnabled="true"
+                app:hintTextColor="@color/pink">
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/ager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/nunito_regular"
+                    android:inputType="none"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Rating fields-->
+            <LinearLayout
+                android:id="@+id/lo_rating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/lo_energy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <TextView
+                        android:id="@+id/txt_energy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_weight="3"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:text="@string/txt_energy"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        tools:ignore="NestedWeights" />
+
+                    <LinearLayout
+                        android:id="@+id/lo_slider_energy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.slider.Slider
+                            android:id="@+id/sliderEnergy"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:stepSize="1"
+                            android:valueFrom="0"
+                            android:valueTo="6"
+                            app:tickVisible="false" />
+
+                        <TextView
+                            android:id="@+id/sttEnergy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nunito_regular"
+                            android:hint="@string/txt_status"
+                            android:paddingStart="5dp"
+                            android:textColor="@color/blue"
+                            android:textSize="15sp"
+                            android:visibility="invisible"
+                            tools:ignore="RtlSymmetry" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lo_activity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <TextView
+                        android:id="@+id/txt_activity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_weight="3"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:text="@string/txt_activityLevel"
+                        android:textColor="@color/black"
+                        tools:ignore="NestedWeights" />
+
+                    <LinearLayout
+                        android:id="@+id/lo_slider_activity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.slider.Slider
+                            android:id="@+id/sliderActivity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:stepSize="1"
+                            android:valueFrom="0"
+                            android:valueTo="6"
+                            app:tickVisible="false" />
+
+                        <TextView
+                            android:id="@+id/sttActivity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nunito_regular"
+                            android:hint="@string/txt_status"
+                            android:paddingStart="5dp"
+                            android:textColor="@color/blue"
+                            android:textSize="15sp"
+                            android:visibility="invisible"
+                            tools:ignore="RtlSymmetry" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lo_playfull"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <TextView
+                        android:id="@+id/txt_playfull"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_weight="3"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:text="@string/txt_playfull"
+                        android:textColor="@color/black"
+                        tools:ignore="NestedWeights" />
+
+                    <LinearLayout
+                        android:id="@+id/lo_slider_playfull"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.slider.Slider
+                            android:id="@+id/sliderPlayfull"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:stepSize="1"
+                            android:valueFrom="0"
+                            android:valueTo="6"
+                            app:tickVisible="false" />
+
+                        <TextView
+                            android:id="@+id/sttPlayfull"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nunito_regular"
+                            android:hint="@string/txt_status"
+                            android:paddingStart="5dp"
+                            android:textColor="@color/blue"
+                            android:textSize="15sp"
+                            android:visibility="invisible"
+                            tools:ignore="RtlSymmetry" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lo_affection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <TextView
+                        android:id="@+id/txt_affection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_weight="3"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:text="@string/txt_affection"
+                        android:textColor="@color/black"
+                        tools:ignore="NestedWeights" />
+
+                    <LinearLayout
+                        android:id="@+id/lo_slider_affection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.slider.Slider
+                            android:id="@+id/sliderAffection"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:stepSize="1"
+                            android:valueFrom="0"
+                            android:valueTo="6"
+                            app:tickVisible="false" />
+
+                        <TextView
+                            android:id="@+id/sttAffection"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nunito_regular"
+                            android:hint="@string/txt_status"
+                            android:paddingStart="5dp"
+                            android:textColor="@color/blue"
+                            android:textSize="15sp"
+                            android:visibility="invisible"
+                            tools:ignore="RtlSymmetry" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lo_training"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <TextView
+                        android:id="@+id/txt_training"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_weight="3"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:text="@string/txt_training"
+                        android:textColor="@color/black"
+                        tools:ignore="NestedWeights" />
+
+                    <LinearLayout
+                        android:id="@+id/lo_slider_training"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.slider.Slider
+                            android:id="@+id/sliderTraining"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:stepSize="1"
+                            android:valueFrom="0"
+                            android:valueTo="6"
+                            app:tickVisible="false" />
+
+                        <TextView
+                            android:id="@+id/sttTraining"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nunito_regular"
+                            android:hint="@string/txt_status"
+                            android:paddingStart="5dp"
+                            android:textColor="@color/blue"
+                            android:textSize="15sp"
+                            android:visibility="invisible"
+                            tools:ignore="RtlSymmetry" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@color/pink" />
+
+
+            <Button
+                android:id="@+id/btnCreate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="@string/btn_add_new_pet" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.View.EditProfileActivity">
+
+    <include
+        android:id="@+id/toolbarProfile"
+        layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbarProfile">
+
+
+        <LinearLayout
+            android:id="@+id/editForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="10dp">
+
+            <!--User avatar-->
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/userImg"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/ic_baseline_account_circle_24"
+                    android:scaleType="centerCrop"
+                    app:riv_oval="true" />
+
+            </FrameLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_fullName"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="@string/p_fullName"
+                app:boxStrokeColor="@color/pink"
+                app:boxStrokeErrorColor="@color/red_error"
+                app:boxStrokeWidth="1dp"
+                app:counterEnabled="true"
+                app:counterMaxLength="100"
+                app:counterTextColor="@color/pink"
+                app:endIconMode="clear_text"
+                app:hintTextColor="@color/pink">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tiet_fullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/nunito_regular"
+                    android:inputType="text"
+                    android:scrollbars="horizontal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--DOB-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_dob"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="@string/p_dob"
+                app:boxStrokeColor="@color/pink"
+                app:boxStrokeErrorColor="@color/red_error"
+                app:boxStrokeWidth="1dp"
+                app:endIconMode="clear_text"
+                app:hintTextColor="@color/pink"
+                app:startIconDrawable="@drawable/ic_baseline_calendar_today_24">
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/mactv_dob"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:cursorVisible="false"
+                    android:focusableInTouchMode="false"
+                    android:fontFamily="@font/nunito_regular"
+                    android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Gender -->
+            <TextView
+                android:id="@+id/gender_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="@string/ug_gender"
+                android:textColor="@color/pink"
+                android:textSize="20sp" />
+
+            <RadioGroup
+                android:id="@+id/rg_u_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <!--Female-->
+                <RadioButton
+                    android:id="@+id/rbtn_u_female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="60dp"
+                    android:buttonTint="@color/pink"
+                    android:text="@string/ug_female" />
+
+                <!--Male-->
+                <RadioButton
+                    android:id="@+id/rbtn_u_male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="60dp"
+                    android:buttonTint="@color/pink"
+                    android:text="@string/ug_male" />
+
+                <!--Other-->
+                <RadioButton
+                    android:id="@+id/rbtn_u_other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/pink"
+                    android:text="@string/ug_other" />
+
+            </RadioGroup>
+
+            <!--Error Text gender-->
+            <TextView
+                android:id="@+id/tv_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_regular"
+                android:gravity="center"
+                android:text="@string/rbtn_nonselect"
+                android:textColor="@color/red_error"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <!--Phone number -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_phoneNumber"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/ug_phoneNumber"
+                app:boxStrokeColor="@color/pink"
+                app:boxStrokeErrorColor="@color/red_error"
+                app:boxStrokeWidth="1dp"
+                app:counterEnabled="true"
+                app:counterMaxLength="10"
+                app:counterTextColor="@color/pink"
+                app:hintTextColor="@color/pink">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tiet_phoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/nunito_regular"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Email -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_email"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:enabled="false"
+                android:hint="@string/ug_email"
+                app:boxStrokeColor="@color/pink"
+                app:boxStrokeErrorColor="@color/red_error"
+                app:boxStrokeWidth="1dp"
+                app:hintTextColor="@color/pink">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tiet_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:cursorVisible="false"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:fontFamily="@font/nunito_regular"
+                    android:inputType="none"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="25dp"
+                android:background="@color/pink" />
+
+            <!--Address-->
+            <TextView
+                android:id="@+id/address_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="@string/ug_address"
+                android:textColor="@color/pink"
+                android:textSize="20sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_proCi"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="@string/txt_province_city"
+                app:boxStrokeColor="@color/pink"
+                app:boxStrokeErrorColor="@color/red_error"
+                app:boxStrokeWidth="1dp"
+                app:endIconMode="dropdown_menu"
+                app:hintTextColor="@color/pink">
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/mactv_proCi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:fontFamily="@font/nunito_regular"
+                    android:inputType="none"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- District-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_dist"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:hint="@string/txt_district"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeColor="@color/pink"
+                app:boxStrokeErrorColor="@color/red_error"
+                app:boxStrokeWidth="1dp"
+                app:endIconMode="dropdown_menu"
+                app:hintTextColor="@color/pink">
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/mactv_dist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:fontFamily="@font/nunito_regular"
+                    android:inputType="none"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--House number -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_hNumber"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:hint="@string/txt_houseNumber"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeColor="@color/pink"
+                app:boxStrokeErrorColor="@color/red_error"
+                app:boxStrokeWidth="1dp"
+                app:endIconMode="clear_text"
+                app:hintTextColor="@color/pink">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tiet_hNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:fontFamily="@font/nunito_regular"
+                    android:inputType="text"
+                    android:scrollbars="horizontal"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <FrameLayout
+                android:id="@+id/layoutImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:animateLayoutChanges="true">
+
+                <Button
+                    android:id="@+id/btn_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:text="@string/btn_saveInfo" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:visibility="invisible" />
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

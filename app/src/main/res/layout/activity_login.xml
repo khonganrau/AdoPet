@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    android:id="@+id/main_layout_id"
+    tools:context=".UI.View.LoginActivity">
+
+
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="@dimen/logo_icon_width"
+        android:layout_height="@dimen/logo_icon_height"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/layout_marginTop"
+        android:background="@drawable/bg_circle_red"
+        android:elevation="@dimen/elevation"
+        android:src="@mipmap/ic_icon_app_foreground" />
+
+    <TextView
+        android:id="@+id/tv_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_logo"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:elevation="10dp"
+        android:text="@string/txt_login"
+        android:textColor="@color/black"
+        android:textSize="35dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnManage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_logo"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:elevation="@dimen/_10sdp"
+        android:text="manager"
+        android:visibility="invisible" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_username"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_login"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="8dp"
+        android:elevation="10dp"
+        android:hint="@string/shr_hint_email"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@color/pink"
+        app:boxStrokeWidth="1dp"
+        app:endIconMode="clear_text"
+        app:errorEnabled="true"
+        app:startIconDrawable="@drawable/ic_baseline_account_circle">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/userName_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_password"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_username"
+        android:elevation="10dp"
+        android:hint="@string/shr_hint_password"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@color/pink"
+        app:boxStrokeWidth="1dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="25"
+        app:endIconMode="password_toggle"
+        app:errorEnabled="true"
+        app:startIconDrawable="@drawable/ic_baseline_lock">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:shadowColor="@color/white" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <ImageView
+        android:id="@+id/iv_fingerprint"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_below="@id/layout_password"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="35dp"
+        android:layout_toRightOf="@id/btn_login"
+        app:srcCompat="@drawable/ic_baseline_fingerprint_24"
+        app:tint="@color/pink" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:backgroundTint="@color/pink"
+        android:elevation="10dp"
+        android:text="@string/btn_login" />
+
+    <Button
+        android:id="@+id/btn_sign_up"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_login"
+        android:layout_centerHorizontal="true"
+        android:text="@string/txt_sign_up"
+        android:textColor="@color/pink" />
+
+
+    <TextView
+        android:id="@+id/tv_forgot_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_sign_up"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/roboto"
+        android:text="Forgot your login details? Get Help signing in."
+        android:textColor="#B3B1B1" />
+
+</RelativeLayout>

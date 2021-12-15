@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.adoption_pet">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_icon_app"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_icon_app"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Adoption_pet.Light"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".UI.View.EditPetProfileActivity"
+            android:exported="true" />
+        <activity
+            android:name=".UI.Widget.qrCode.QrCodeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UI.View.WebViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UI.Menu.FavoritesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UI.View.EditProfileActivity"
+            android:exported="true" />
+        <activity
+            android:name=".UI.Menu.ChangePasswordActivity"
+            android:exported="true" />
+        <activity
+            android:name=".UI.Menu.UserProfileActivity"
+            android:exported="true" />
+        <activity
+            android:name=".UI.View.ResultSearchActivity"
+            android:exported="true" />
+        <activity
+            android:name=".UI.View.SearchActivity"
+            android:exported="true" />
+        <activity
+            android:name=".UI.View.CreatePetActivity"
+            android:exported="true" />
+        <activity
+            android:name=".UI.Menu.PetCallActivity"
+            android:exported="true" />
+        <activity
+            android:name=".UI.Menu.AboutPageActivity"
+            android:exported="true" />
+        <activity
+            android:name=".UI.Menu.MyPetsActivity"
+            android:exported="true" />
+
+        <receiver
+            android:name=".UI.Widget.PetAppWidget"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/pet_app_widget_info" />
+        </receiver>
+
+        <activity
+            android:name=".UI.View.PetProfileActivity"
+            android:exported="true" />
+        <activity
+            android:name=".UI.Menu.PetsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".UI.View.SignUpActivity"
+            android:exported="true" />
+        <activity
+            android:name=".UI.Widget.OnboardingActivity"
+            android:exported="true" />
+        <activity
+            android:name=".UI.View.LoginActivity"
+            android:exported="true" />
+        <activity
+            android:name=".UI.View.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <service
+            android:name=".firebase.MessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

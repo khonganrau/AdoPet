@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/basicSearch"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.View.BasicFragment">
+
+    <ScrollView
+        android:id="@+id/basicScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/locationLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutProvince"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/txt_search_province"
+                    app:boxStrokeWidth="1dp">
+
+                    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                        android:id="@+id/province"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:cursorVisible="false"
+                        android:fontFamily="@font/nunito_regular"
+                        android:inputType="none"
+                        android:textSize="15sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:src="@drawable/ic_baseline_location_on_24"
+                    tools:ignore="ContentDescription" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/codeLocation"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:hint="@string/txt_zipCode"
+                    app:boxStrokeColor="@color/pink"
+                    app:boxStrokeWidth="1dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/zipCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/nunito_regular"
+                        android:inputType="number"
+                        android:textSize="15sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/typeLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="@string/petType"
+                app:boxStrokeColor="@color/pink"
+                app:boxStrokeWidth="1dp"
+                app:hintTextColor="@color/pink"
+                android:focusableInTouchMode="false">
+
+                <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                    android:id="@+id/type"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:cursorVisible="false"
+                    android:fontFamily="@font/nunito_regular"
+                    android:inputType="none"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:focusableInTouchMode="false"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutBreed"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:enabled="false"
+                android:focusableInTouchMode="false"
+                android:hint="@string/txt_pet_breed">
+
+                <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                    android:id="@+id/breed"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:cursorVisible="false"
+                    android:fontFamily="@font/nunito_regular"
+                    android:inputType="none"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:focusableInTouchMode="false"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/lo_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical">
+
+                <RadioGroup
+                    android:id="@+id/gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbtn_gender_any"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/rbtn_selector"
+                        android:button="@null"
+                        android:checked="true"
+                        android:fontFamily="@font/nunito_regular"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/txt_option_any"
+                        android:textColor="@drawable/rbtn_textcolor_selector" />
+
+                    <RadioButton
+                        android:id="@+id/radio_gender_male"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/rbtn_selector"
+                        android:button="@null"
+                        android:fontFamily="@font/nunito_regular"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/txt_gender_male"
+                        android:textColor="@drawable/rbtn_textcolor_selector" />
+
+                    <RadioButton
+                        android:id="@+id/radio_gender_female"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/rbtn_selector"
+                        android:button="@null"
+                        android:fontFamily="@font/nunito_regular"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/txt_gender_female"
+                        android:textColor="@drawable/rbtn_textcolor_selector" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/sterilization"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/steri_any"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/rbtn_selector"
+                    android:button="@null"
+                    android:checked="true"
+                    android:fontFamily="@font/nunito_regular"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="@string/txt_option_any"
+                    android:textColor="@drawable/rbtn_textcolor_selector" />
+
+                <RadioButton
+                    android:id="@+id/sterilized"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/rbtn_selector"
+                    android:button="@null"
+                    android:fontFamily="@font/nunito_regular"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="@string/txt_sterilized"
+                    android:textColor="@drawable/rbtn_textcolor_selector" />
+
+                <RadioButton
+                    android:id="@+id/unsterized"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/rbtn_selector"
+                    android:button="@null"
+                    android:fontFamily="@font/nunito_regular"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="@string/txt_unsterilized"
+                    android:textColor="@drawable/rbtn_textcolor_selector" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/layoutAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical">
+
+                <RadioGroup
+                    android:id="@+id/age"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbtn_ager_any"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/rbtn_selector"
+                        android:button="@null"
+                        android:checked="true"
+                        android:fontFamily="@font/nunito_regular"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/txt_option_any"
+                        android:textColor="@drawable/rbtn_textcolor_selector" />
+
+                    <RadioButton
+                        android:id="@+id/radio_ager_baby"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/rbtn_selector"
+                        android:button="@null"
+                        android:fontFamily="@font/nunito_regular"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/txt_ager_baby"
+                        android:textColor="@drawable/rbtn_textcolor_selector" />
+
+                    <RadioButton
+                        android:id="@+id/radio_ager_young"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/rbtn_selector"
+                        android:button="@null"
+                        android:fontFamily="@font/nunito_regular"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/txt_ager_young"
+                        android:textColor="@drawable/rbtn_textcolor_selector" />
+
+                    <RadioButton
+                        android:id="@+id/radio_ager_adult"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/rbtn_selector"
+                        android:button="@null"
+                        android:fontFamily="@font/nunito_regular"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/txt_ager_adult"
+                        android:textColor="@drawable/rbtn_textcolor_selector" />
+
+                    <RadioButton
+                        android:id="@+id/radio_ager_senior"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/rbtn_selector"
+                        android:button="@null"
+                        android:fontFamily="@font/nunito_regular"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/txt_ager_senior"
+                        android:textColor="@drawable/rbtn_textcolor_selector" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lo_size"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical">
+
+                <RadioGroup
+                    android:id="@+id/size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbtn_size_any"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/rbtn_selector"
+                        android:button="@null"
+                        android:checked="true"
+                        android:fontFamily="@font/nunito_regular"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/txt_size_any"
+                        android:textColor="@drawable/rbtn_textcolor_selector" />
+
+                    <RadioButton
+                        android:id="@+id/radio_size_s"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/rbtn_selector"
+                        android:button="@null"
+                        android:fontFamily="@font/nunito_regular"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/txt_size_s"
+                        android:textColor="@drawable/rbtn_textcolor_selector" />
+
+                    <RadioButton
+                        android:id="@+id/radio_size_m"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/rbtn_selector"
+                        android:button="@null"
+                        android:fontFamily="@font/nunito_regular"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/txt_size_m"
+                        android:textColor="@drawable/rbtn_textcolor_selector" />
+
+                    <RadioButton
+                        android:id="@+id/radio_size_l"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/rbtn_selector"
+                        android:button="@null"
+                        android:fontFamily="@font/nunito_regular"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/txt_size_l"
+                        android:textColor="@drawable/rbtn_textcolor_selector" />
+
+                    <RadioButton
+                        android:id="@+id/radio_size_xl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/rbtn_selector"
+                        android:button="@null"
+                        android:fontFamily="@font/nunito_regular"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/txt_size_xl"
+                        android:textColor="@drawable/rbtn_textcolor_selector" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/btn_search_custom"
+                android:fontFamily="@font/nunito_extrabold"
+                android:text="@string/btn_search" />
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</FrameLayout>

@@ -1,0 +1,1427 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">AdoPet</string>
+    <string name="txt_imageView_logo" translatable="false">Logo</string>
+    <string name="slogan">Love them Enough ,Give them Best</string>
+
+    <!--  Login   -->
+    <string name="shr_hint_email" translatable="false">Email</string>
+    <string name="shr_hint_password">Password</string>
+    <string name="btn_login">Login</string>
+    <string name="txt_login">Login</string>
+    <string name="txt_sign_up">Sign Up</string>
+    <string name="txt_toast_verifyEmail">Please verify your email.</string>
+    <string name="empty_credentials_tv">Empty Credentials! </string>
+
+
+    <!--    Onbroading   -->
+    <string name="app_intro_skip_button">SKIP</string>
+    <string name="app_intro_next_button" tools:ignore="MissingTranslation">NEXT</string>
+    <string name="app_intro_back_button" tools:ignore="MissingTranslation">BACK</string>
+    <string name="app_intro_done_button">DONE</string>
+    <string name="app_intro_image_content_description" tools:ignore="MissingTranslation">graphics</string>
+    <string name="txt_toast_onboarding">Swiped out right</string>
+    <string name="txt_title_one">A deserved home</string>
+    <string name="txt_subtitle_one">Lost of animals enter shelters every year, where their lives are complex.</string>
+    <string name="txt_title_two">More lives</string>
+    <string name="txt_subtitle_two">You\'re make space for and giving an opportunity them.</string>
+    <string name="txt_title_three">New friend</string>
+    <string name="txt_subtitle_three">They have so much love to give and ever stop giving it to you.</string>
+
+    <!--    Sign Up    -->
+    <string name="txt_error_validate_email">You need to enter a email.</string>
+    <string name="txt_error_validate_password">You need to enter a password.</string>
+    <string name="txt_error_validate_fullname">You need to enter your full name</string>
+    <string name="txt_toast_empty_registration">Registration information is empty.</string>
+    <string name="shr_hint_fullName">Full name</string>
+    <string name="btn_signup">Sign Up</string>
+    <string name="txt_wait">Please Wait!</string>
+    <string name="txt_toast_signUp_successful">Sign Up Successful.</string>
+    <string name="txt_toast_shortPass">Password too short!</string>
+
+    <!--    Reset Password  -->
+    <string name="txt_reset_password_dialogs">Reset Password ?</string>
+    <string name="txt_reset_enter_email_dialogs">Enter Your  email to received Reset Link</string>
+    <string name="txt_accept">Accept</string>
+    <string name="txt_toast_resetPassword">Reset Link sent to your email.</string>
+    <string name="txt_toast_error_resetpassword">Error ! Reset link is not sent to</string>
+    <string name="txt_cancel">Cancel</string>
+
+    <!--    Item Menu  -->
+    <string name="txt_itemmenu_Pets">Pets</string>
+    <string name="txt_itemmenu_Favorites">Favorites</string>
+    <string name="txt_itemmenu_Messages">Messages</string>
+    <string name="txt_itemmenu_MyPets">My Pets</string>
+    <string name="txt_itemmenu_AboutApp">About App</string>
+    <string name="txt_itemmenu_SignOut">Sign Out</string>
+    <string name="txt_item_dark_mode">Dark mode</string>
+    <string name="txt_headerTitle_userName" translatable="false">Khonganrau</string>
+    <string name="txt_headerText_email" translatable="false">users@gmail.com</string>
+    <string name="txt_itemmenu_changePassword">Change Password</string>
+    <string name="txt_itemmenu_myProfile">My Profile</string>
+
+
+    <!-- Navigation Bar -->
+    <string name="txt_content_description_pets">Explore pets</string>
+    <string name="txt_content_description_favorites">Favorite pets</string>
+    <string name="txt_content_description_messages" traslatatable="false">Communication</string>
+    <string name="txt_content_description_myPets">Your pets</string>
+    <string name="txt_content_description_abouApp">Applications Information</string>
+    <string name="navigation_drawer_open">Open naviagtion drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+
+    <!-- Navigation Header -->
+    <string name="txt_user_avatar_content_description">User avatar</string>
+
+    <!-- Gridview Custom -->
+    <string name="txt_pet_name">Pet Name</string>
+    <string name="txt_pet_breed">Pets Breed</string>
+    <string name="appwidget_text" translatable="false">AdoPet</string>
+    <string name="add_widget" translatable="false">Add widget</string>
+    <string name="app_widget_description">This is an app widget description</string>
+
+    <!-- Dark mode Setting -->
+    <string-array name="theme">
+        <item>System Default</item>
+        <item>Dark</item>
+        <item>Light</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+
+    <!-- Notification toast sample-->
+    <string name="toast_finger_no_exist">Fingerprint sensor not exist</string>
+    <string name="toast_biometic_unavailable">Biometric features are currently unavailable.</string>
+    <string name="notification_sample" translatable="false">This is notification</string>
+    <string name="content_image_icon" translatable="false">Icon for notification</string>
+
+    <!--My Pets-->
+    <string name="txt_add_floating_btn">Create new pet</string>
+    <string name="txt_pet_demo" translatable="false">Pet demo</string>
+
+    <!--Pet Profile-->
+
+    <string name="txt_pet_name_age" translatable="false">Pet Name, Pet Ager</string>
+    <string name="txt_about_pet">About Pet</string>
+
+    <!--Create new Pet-->
+    <string name="pet_image_lable">Pet\'s Images*</string>
+    <string name="hnt_pet_name">Name of pet*</string>
+    <string name="hnt_pet_dob">Date of birth</string>
+    <string name="txt_gender_male">Male</string>
+    <string name="txt_gender_female">Female</string>
+    <string name="txt_gender">Gender*</string>
+    <string name="txt_sterilization">Sterilization*</string>
+    <string name="txt_ster_yes">Yes</string>
+    <string name="txt_ster_no">No</string>
+    <string name="txt_description">Describe your pet\'s personality*</string>
+    <string name="txt_zipCode">ZIP/ Postal Code</string>
+    <string name="txt_address">Address*</string>
+    <string name="txt_large_size">Large Size*</string>
+    <string name="txt_age">Ager*</string>
+    <string name="txt_energy">Energy Level</string>
+    <string name="txt_activityLevel">Activity Level</string>
+    <string name="txt_playfull">Playfulness Level</string>
+    <string name="txt_affection">Affection Level</string>
+    <string name="txt_training"> Ease of Training</string>
+    <string name="btn_add_new_pet">Add new pet</string>
+    <string name="txt_status">Status</string>
+    <string name="btn_contact">Contact</string>
+    <string name="txt_share_floating_btn">Share</string>
+    <string name="txt_back_btn">Back</string>
+    <string name="txt_title_search">Search</string>
+    <string name="txt_search_basic">Basic</string>
+    <string name="txt_search_advanced">Advanced</string>
+    <string name="txt_option_any">Any</string>
+    <string name="txt_ager_baby">Baby</string>
+    <string name="txt_ager_young">Young</string>
+    <string name="txt_ager_adult">Adult</string>
+    <string name="txt_ager_senior">Senior</string>
+    <string name="txt_size_any">Any</string>
+    <string name="txt_size_s" translatable="false">S</string>
+    <string name="txt_size_m" translatable="false">M</string>
+    <string name="txt_size_l" translatable="false">L</string>
+    <string name="txt_size_xl" translatable="false">XL</string>
+    <string name="btn_search">Search Pet</string>
+    <string name="txt_title_result">Results</string>
+    <string name="txt_title_create">Create New Pet</string>
+    <string name="txt_low">Low</string>
+    <string name="txt_moderate">Moderate</string>
+    <string name="txt_high">High</string>
+    <string name="txt_error_blank_fields">You need fill out this field.</string>
+    <string name="helper_txt_breed">Before choosing pets breeds, determine the type of pet in the above field.</string>
+    <string name="txt_error_breed">Please select one.</string>
+    <string name="txt_error_non_type">Select one type for pet.</string>
+    <string name="cat">Cat</string>
+
+    <!--My profile-->
+    <string name="txt_user_name">User Name</string>
+    <string name="txt_date_of_birth">Day of Birth</string>
+    <string name="txt_email">Email</string>
+    <string name="txt_other">Other</string>
+    <string name="txt_province_city">Province / City*</string>
+    <string name="txt_district">District*</string>
+    <string name="txt_wards">Wards*</string>
+    <string name="txt_houseNumber">House Number*</string>
+    <string name="btn_saveInfo">Save Information</string>
+    <string name="txt_editInfo">Edit Information</string>
+    <string name="txt_content_description_myProfile">My Profile</string>
+    <string name="txt_content_description_changePassword">Change Password</string>
+    <string name="txt_toast_myProfile">My Profile</string>
+    <string name="txt_numberPhone">Numberphone</string>
+    <string name="txt_province">Province/City*</string>
+
+
+    <!--Change passwords-->
+    <string name="txt_error_currentPassword">You need fill out the current passwords fields.</string>
+    <string name="txt_error_newPassword">You need to enter new passwords.</string>
+    <string name="txt_error_newPassword_short">Your password need more than 7 characters.</string>
+    <string name="txt_error_confirmPassword">You need enter the confirm password.</string>
+    <string name="txt_error_confirmPassword_notmatch">Your password and confirm password do not match</string>
+    <string name="txt_emptyChangePassword">Empty form!!!</string>
+    <string name="txt_reAuth_success" translatable="false">Re-authenticated</string>
+    <string name="txt_reAuth_failed" translatable="false">Re- Authentication failed</string>
+    <string name="txt_toast_password_change_success">Updated new passwords successful.</string>
+    <string name="txt_oldPass">Current Passwords</string>
+    <string name="txt_newPass">New Passwords</string>
+    <string name="txt_confirmPass">Confirm Passwords</string>
+    <string name="btn_update">Update</string>
+    <string name="txt_blank_required_field">You need to fill out the required fields!!!</string>
+    <string name="shr_hint_currentPassword">Current password</string>
+    <string name="txt_error_login">You need to login.</string>
+    <string name="txt_currentPasswords_notMatch">Your current password is not correct.</string>
+    <string name="txt_success_changePassword">Your password changed successfully!</string>
+
+    <!--Create new pet-->
+    <string name="txt_valid_name_unique_char">Only letters are allowed!</string>
+    <string name="txt_error_blank_form">Please complete the required fields.</string>
+    <string name="rbtn_nonselect">Select one item!</string>
+    <string name="txt_error_null_uri">Select one pet\'s image.</string>
+    <string name="txt_error_des_short">Pet\'s description must have more than 100 characters!.</string>
+    <string name="txt_error_des_long">Pet\'s description must less than 3000 characters!</string>
+    <string name="txt_address_lable">Address</string>
+    <string name="txt_location" translatable="false">Location</string>
+    <string name="txt_location_ques" translatable="false">Your current location or add other location?</string>
+    <string name="positive_button">Current Location</string>
+    <string name="negative_button">Add other location.</string>
+    <string name="txt_petProperties">Pets Properties</string>
+    <string name="txt_error_rate">Rate this fields!</string>
+    <string name="txt_success_create_pet">Your pet created successful.</string>
+    <string name="txt_failed_create" translatable="false">Created progress failed!!!</string>
+    <string name="txt_title_edit_userProfile">Edit User Profile</string>
+    <string name="btn_edit">Edit profile</string>
+    <string name="p_fullName">Fullname*</string>
+    <string name="p_dob">Date of birth</string>
+    <string name="ug_female">Female</string>
+    <string name="ug_male">Male</string>
+    <string name="ug_other">Other</string>
+    <string name="ug_gender">Gender*</string>
+    <string name="ug_phoneNumber">Phonenumber*</string>
+    <string name="ug_email">Email*</string>
+    <string name="ug_address">Address</string>
+    <string name="txt_valid_long_name">Only contain 100 characters!!!</string>
+    <string name="invalid_format_phoneNumbers">Invalid format phone numbers!!!</string>
+    <string name="txt_success_update_profile">Profile updated successful!!!</string>
+    <string name="txt_failed_update_profile">Update failed!!!</string>
+    <string name="txt_description_lable">Description*</string>
+    <string name="distance">Distance</string>
+
+    <!--Main -->
+    <string name="txt_noti_create">Let\'s add pet!!!</string>
+    <string name="txt_NewPet">Newest</string>
+    <string name="heading1">Find Your</string>
+    <string name="subtitle1">Lovely pet in anywhere</string>
+    <string name="txt_today">Today</string>
+    <string name="txt_error_update_newest" translatable="false">Cannot update newest pet!!!</string>
+    <string name="txt_onClickItem" translatable="false">onPetClick: clicked.</string>
+    <string name="txt_onCreate" translatable="false">onCreate: called.</string>
+    <string name="txt_itemmenu_Call">Call</string>
+    <string name="txt_duration">Duration</string>
+    <string name="txt_editPet">Edit</string>
+    <string name="txt_remove">Remove</string>
+    <string name="petType">Pet Type</string>
+
+    <!--Pet breed of dog-->
+    <string-array name="beeds_dog">
+        <item>Afador</item>
+        <item>Affehuahua</item>
+        <item>Afghan Hound</item>
+        <item>Airedale Terrier</item>
+        <item>Akbash</item>
+        <item>Akita</item>
+        <item>Hmong dog</item>
+        <item>Bac Ha dog</item>
+        <item>Phu quoc dog</item>
+        <item>Basset Hound</item>
+        <item>Boston Terrier</item>
+        <item>Alaska</item>
+        <item>Samoyed</item>
+        <item>Bernard</item>
+        <item>Bull</item>
+        <item>Dobermann</item>
+        <item>Corgi</item>
+        <item>Shiba Inu</item>
+        <item>Rottweiler</item>
+        <item>Beagle</item>
+        <item>Yorkshire Terrier</item>
+        <item>Pomeranian</item>
+        <item>Frech Bulldog</item>
+        <item>Chihuahua</item>
+        <item>Poodle</item>
+        <item>Golden Retriever</item>
+        <item>Pug</item>
+        <item>Siberian Husky</item>
+        <item>Labrador Retriever</item>
+        <item>German Shepherd</item>
+    </string-array>
+
+    <string-array name="beeds_dog_search">
+        <item>Any</item>
+        <item>Afador</item>
+        <item>Affehuahua</item>
+        <item>Afghan Hound</item>
+        <item>Airedale Terrier</item>
+        <item>Akbash</item>
+        <item>Akita</item>
+        <item>Hmong dog</item>
+        <item>Bac Ha dog</item>
+        <item>Phu quoc dog</item>
+        <item>Basset Hound</item>
+        <item>Boston Terrier</item>
+        <item>Alaska</item>
+        <item>Samoyed</item>
+        <item>Bernard</item>
+        <item>Bull</item>
+        <item>Dobermann</item>
+        <item>Corgi</item>
+        <item>Shiba Inu</item>
+        <item>Rottweiler</item>
+        <item>Beagle</item>
+        <item>Yorkshire Terrier</item>
+        <item>Pomeranian</item>
+        <item>Frech Bulldog</item>
+        <item>Chihuahua</item>
+        <item>Poodle</item>
+        <item>Golden Retriever</item>
+        <item>Pug</item>
+        <item>Siberian Husky</item>
+        <item>Labrador Retriever</item>
+        <item>German Shepherd</item>
+    </string-array>
+
+    <!--Pet breed of dog-->
+    <string-array name="beeds_cat">
+        <item>Vietnamese Cat</item>
+        <item>American Bobtail</item>
+        <item>American Curl</item>
+        <item>American Short Hair</item>
+        <item>Balinese</item>
+        <item>Bengal</item>
+        <item>Birman</item>
+        <item>Bombay</item>
+        <item>Bristish Short Hair</item>
+        <item>Burmilla</item>
+        <item>Domestic Long Hair</item>
+        <item>Exotic Short Hair</item>
+        <item>Himalyan</item>
+        <item>Maine Coon</item>
+        <item>Muckin</item>
+        <item>Persian</item>
+        <item>Scottish Fold</item>
+        <item>Siamese</item>
+        <item>Tabby</item>
+        <item>Hairless Cat</item>
+    </string-array>
+
+    <string-array name="beeds_cat_search">
+        <item>Any</item>
+        <item>Vietnamese Cat</item>
+        <item>American Bobtail</item>
+        <item>American Curl</item>
+        <item>American Short Hair</item>
+        <item>Balinese</item>
+        <item>Bengal</item>
+        <item>Birman</item>
+        <item>Bombay</item>
+        <item>Bristish Short Hair</item>
+        <item>Burmilla</item>
+        <item>Domestic Long Hair</item>
+        <item>Exotic Short Hair</item>
+        <item>Himalyan</item>
+        <item>Maine Coon</item>
+        <item>Muckin</item>
+        <item>Persian</item>
+        <item>Scottish Fold</item>
+        <item>Siamese</item>
+        <item>Tabby</item>
+        <item>Hairless Cat</item>
+    </string-array>
+
+    <!--Province/City-->
+    <string-array name="city_array">
+        <item>An Giang</item>
+        <item>Bà Rịa - Vũng Tàu</item>
+        <item>Bạc Liêu</item>
+        <item>Bắc Kạn</item>
+        <item>Bắc Giang</item>
+        <item>Bắc Ninh</item>
+        <item>Bến Tre</item>
+        <item>Bình Dương</item>
+        <item>Bình Định</item>
+        <item>Bình Phước</item>
+        <item>Bình Thuận</item>
+        <item>Cà Mau</item>
+        <item>Cao Bằng</item>
+        <item>Cần Thơ</item>
+        <item>Đà Nẵng</item>
+        <item>Đắk Lắk</item>
+        <item>Đắk Nông</item>
+        <item>Diện Biên</item>
+        <item>Đồng Nai</item>
+        <item>Đồng Tháp</item>
+        <item>Gia Lai</item>
+        <item>Hà Giang</item>
+        <item>Hà Nam</item>
+        <item>Hà Nội</item>
+        <item>Hà Tây</item>
+        <item>Hà Tĩnh</item>
+        <item>Hải Dương</item>
+        <item>Hải Phòng</item>
+        <item>Hòa Bình</item>
+        <item>Hồ Chí Minh</item>
+        <item>Hậu Giang</item>
+        <item>Hưng Yên</item>
+        <item>Khánh Hòa</item>
+        <item>Kiên Giang</item>
+        <item>Kon Tum</item>
+        <item>Lai Chêu</item>
+        <item>Lào Cai</item>
+        <item>Lạng Sơn</item>
+        <item>Lâm Đồng</item>
+        <item>Long An</item>
+        <item>Nam Định</item>
+        <item>Nghệ An</item>
+        <item>Ninh Bình</item>
+        <item>Ninh Thuận</item>
+        <item>Phú Thọ</item>
+        <item>Phú Yên</item>
+        <item>Quảng Bình</item>
+        <item>Quảng Ngãi</item>
+        <item>Quảng Ninh</item>
+        <item>Quảng Trị</item>
+        <item>Sóc Trăng</item>
+        <item>Sơn La</item>
+        <item>Tây Ninh</item>
+        <item>Thái Bình</item>
+        <item>Thái Nguyên</item>
+        <item>Thanh Hóa</item>
+        <item>Thừa Thiên - Huế</item>
+        <item>Tiền Giang</item>
+        <item>Trà Vinh</item>
+        <item>Tuyên Quang</item>
+        <item>Vĩnh Long</item>
+        <item>Vĩnh Phúc</item>
+        <item>Yên Bái</item>
+    </string-array>
+
+    <!--Size array-->
+    <string-array name="size_array">
+        <item>S</item>
+        <item>M</item>
+        <item>L</item>
+        <item>XL</item>
+    </string-array>
+
+    <!-- Age array-->
+    <string-array name="age_array">
+        <item>Baby</item>
+        <item>Young</item>
+        <item>Adult</item>
+        <item>Senior</item>
+    </string-array>
+
+    <string-array name="angiangdistricts">
+        <item>Long Xuyen</item>
+        <item>Chau Doc</item>
+        <item>Tan Chau</item>
+        <item>An Phu</item>
+        <item>Tinh Bien</item>
+        <item>Tri Ton</item>
+        <item>Chau Phu</item>
+        <item>Chau Thanh</item>
+        <item>Thoai Son</item>
+        <item>Cho Moi</item>
+        <item>Phu Tan</item>
+    </string-array>
+
+    <string-array name="bataudistricts">
+        <item>Vung Tau</item>
+        <item>Ba Ria</item>
+        <item>Chau Duc</item>
+        <item>Xuyen Moc</item>
+        <item>Long Dien</item>
+        <item>Dat Do</item>
+        <item>Phu My</item>
+        <item>Con Dao</item>
+    </string-array>
+
+    <string-array name="baclieudistricts">
+        <item>Bac Lieu</item>
+        <item>Gia Rai</item>
+        <item>Hoa Binh</item>
+        <item>Dong Hai</item>
+        <item>Phuoc Long</item>
+        <item>Vinh Loi</item>
+        <item>Hong Dan</item>
+    </string-array>
+
+    <string-array name="backandists">
+        <item>Bac Kan</item>
+        <item>Pac Nam</item>
+        <item>Ba Be</item>
+        <item>Ngan Son</item>
+        <item>Bach Thong</item>
+        <item>Cho Don</item>
+        <item>Cho Moi</item>
+        <item>Na Ri</item>
+    </string-array>
+
+    <string-array name="tuyenquangdist">
+        <item>Tuyen Quang</item>
+        <item>Lam Binh</item>
+        <item>Na Hang</item>
+        <item>Chiem Hoa</item>
+        <item>Ham Yen</item>
+        <item>Yen Son</item>
+        <item>Son Duong</item>
+    </string-array>
+
+    <string-array name="laocaidist">
+        <item>Lao Cai</item>
+        <item>Bat Xat</item>
+        <item>Muong Khuong</item>
+        <item>Si Ma Cai</item>
+        <item>Bac Ha</item>
+        <item>Bao Thang</item>
+        <item>Bao Yen</item>
+        <item>Sa Pa</item>
+        <item>Van Ban</item>
+    </string-array>
+
+    <string-array name="dienbiendist">
+        <item>Dien Bien Phu</item>
+        <item>Muong Lay</item>
+        <item>Muong Nhe</item>
+        <item>Muong Cha</item>
+        <item>Tua Chua</item>
+        <item>Tuan Giao</item>
+        <item>Dien Bien</item>
+        <item>Dien Bien Dong</item>
+        <item>Muong Ang</item>
+        <item>Nam Pho</item>
+    </string-array>
+
+    <string-array name="laichaudist">
+        <item>Lai Chau</item>
+        <item>Tam Duong</item>
+        <item>Muong Te</item>
+        <item>Sinh Ho</item>
+        <item>Phong Tho</item>
+        <item>Than Uyen</item>
+        <item>Tan Uyen</item>
+        <item>Nam Nhun</item>
+    </string-array>
+
+    <string-array name="sonladist">
+        <item>Son La</item>
+        <item>Quynh Nhai</item>
+        <item>Thuan Chau</item>
+        <item>Muong La</item>
+        <item>Bac Yen</item>
+        <item>Phu Yen</item>
+        <item>Moc Chau</item>
+        <item>Yen Chau</item>
+        <item>Mai Son</item>
+        <item>Song Ma</item>
+        <item>Sop Cop</item>
+        <item>Van Ho</item>
+    </string-array>
+
+    <string-array name="yenbaidist">
+        <item>Yen Bai</item>
+        <item>Nghia Lo</item>
+        <item>Luc Yen</item>
+        <item>Van Yen</item>
+        <item>Mu Cang Chai</item>
+        <item>Tran Yen</item>
+        <item>Tram Tau</item>
+        <item>Van Chan</item>
+        <item>Yen Binh</item>
+    </string-array>
+
+    <string-array name="hoabinhdist">
+        <item>Hoa Binh</item>
+        <item>Da Bac</item>
+        <item>Ky Son</item>
+        <item>Luong Son</item>
+        <item>Kim Boi</item>
+        <item>Cao Phong</item>
+        <item>Tan Lac</item>
+        <item>Mai Chau</item>
+        <item>Lac Son</item>
+        <item>Yen Thuy</item>
+        <item>Lac Thuy</item>
+    </string-array>
+
+    <string-array name="thainguyendist">
+        <item>Thai Nguyen</item>
+        <item>Song Cong</item>
+        <item>Dinh Hoa</item>
+        <item>Phu Luong</item>
+        <item>Dong Hy</item>
+        <item>Vo Nhai</item>
+        <item>Dai Tu</item>
+        <item>Pho Yen</item>
+        <item>Phu Binh</item>
+    </string-array>
+
+    <string-array name="langsondist">
+        <item>Lang Son</item>
+        <item>Trang Dinh</item>
+        <item>Binh Gia</item>
+        <item>Van Lang</item>
+        <item>Cao Loc</item>
+        <item>Van Quang</item>
+        <item>Bac Son</item>
+        <item>Huu Dung</item>
+        <item>Chi Lang</item>
+        <item>Loc Binh</item>
+        <item>Dinh Lap</item>
+    </string-array>
+
+    <string-array name="quangninhdist">
+        <item>Ha Long</item>
+        <item>Mong Cai</item>
+        <item>Cam Pha</item>
+        <item>Uong Bi</item>
+        <item>Binh Lieu</item>
+        <item>Tien Yen</item>
+        <item>Dam Ha</item>
+        <item>Hai Ha</item>
+        <item>Ba Che</item>
+        <item>Van Don</item>
+        <item>Hoanh Bo</item>
+        <item>Dong Trieu</item>
+        <item>Quang Yen</item>
+        <item>Co To</item>
+    </string-array>
+
+    <string-array name="bacgiangdist">
+        <item>Bac Giang</item>
+        <item>Yen The</item>
+        <item>Tan Yen</item>
+        <item>Lang Giang</item>
+        <item>Luc Nam</item>
+        <item>Luc Ngan</item>
+        <item>Son Dong</item>
+        <item>Yen Dung</item>
+        <item>Viet Yen</item>
+        <item>Hiep Hoa</item>
+    </string-array>
+
+    <string-array name="phuthodist">
+        <item>Viet Tri</item>
+        <item>Phu Tho</item>
+        <item>Doan Hung</item>
+        <item>Ha Hoa</item>
+        <item>Thanh Ba</item>
+        <item>Phu Ninh</item>
+        <item>Yen Lap</item>
+        <item>Cam Khe</item>
+        <item>Tam Nong</item>
+        <item>Lam Thao</item>
+        <item>Thanh Son</item>
+        <item>Thanh Thuy</item>
+        <item>Tan Son</item>
+    </string-array>
+
+    <string-array name="vinhphucdist">
+        <item>Vinh Yen</item>
+        <item>Phuc Yen</item>
+        <item>Lap Trach</item>
+        <item>Tam Duong</item>
+        <item>Tam Dao</item>
+        <item>Binh Xuyen</item>
+        <item>Yen Lac</item>
+        <item>Vinh Tuong</item>
+        <item>Song To</item>
+    </string-array>
+
+    <string-array name="bacninhdist">
+        <item>Bac Ninh</item>
+        <item>Yen Phong</item>
+        <item>Que Vo</item>
+        <item>Tien Du</item>
+        <item>Tu Son</item>
+        <item>Thuan Thanh</item>
+        <item>Gia Binh</item>
+        <item>Luong Tai</item>
+    </string-array>
+
+    <string-array name="haiduongdist">
+        <item>Hai Duong</item>
+        <item>Chi Linh</item>
+        <item>Nam Sach</item>
+        <item>Kinh Mon</item>
+        <item>Kim Thanh</item>
+        <item>Thanh Ha</item>
+        <item>Cam Giang</item>
+        <item>Binh Giang</item>
+        <item>Gia Loc</item>
+        <item>Tu Ky</item>
+        <item>Ninh Giang</item>
+        <item>Thanh Mien</item>
+    </string-array>
+
+    <string-array name="haiphongdist">
+        <item>Hong Bang</item>
+        <item>Ngo Quyen</item>
+        <item>Le Chan</item>
+        <item>Hai An</item>
+        <item>Kien An</item>
+        <item>Do Son</item>
+        <item>Duong Kinh</item>
+        <item>Thuy Nguyen</item>
+        <item>An Duong</item>
+        <item>An Lao</item>
+        <item>Kien Thuy</item>
+        <item>Tien Lang</item>
+        <item>Vinh Bao</item>
+        <item>Cat Hai</item>
+    </string-array>
+
+    <string-array name="hungyendist">
+        <item>Hung Yen</item>
+        <item>Van Lam</item>
+        <item>Van Giang</item>
+        <item>Yen My</item>
+        <item>My Hao</item>
+        <item>An Thi</item>
+        <item>Khoai Chau</item>
+        <item>Kim Dong</item>
+        <item>Tien Lu</item>
+        <item>Phu Cu</item>
+    </string-array>
+
+    <string-array name="thaibinhdist">
+        <item>Thai Binh</item>
+        <item>Quynh Phu</item>
+        <item>Hung Ha</item>
+        <item>Dong Hung</item>
+        <item>Thai Thuy</item>
+        <item>Tien Hai</item>
+        <item>Kien Xuong</item>
+        <item>Vu Thu</item>
+    </string-array>
+
+    <string-array name="hanamdist">
+        <item>Phu Ly</item>
+        <item>Duy Tien</item>
+        <item>Kim Bang</item>
+        <item>Thanh Liem</item>
+        <item>Binh Luc</item>
+        <item>Ly Nhan</item>
+    </string-array>
+
+    <string-array name="namdinhdist">
+        <item>Nam Dinh</item>
+        <item>My Loc</item>
+        <item>Vu Bang</item>
+        <item>Y Yen</item>
+        <item>Nghia Hung</item>
+        <item>Nam Truc</item>
+        <item>Truc Ninh</item>
+        <item>Xuan Truong</item>
+        <item>Giao Thuy</item>
+        <item>Hai Hau</item>
+    </string-array>
+
+    <string-array name="ninhbinhdist">
+        <item>Ninh Binh</item>
+        <item>Tam Diep</item>
+        <item>Nho Quan</item>
+        <item>Gia Vien</item>
+        <item>Hoa Lu</item>
+        <item>Yen Khanh</item>
+        <item>Kim Son</item>
+        <item>Yen Mo</item>
+    </string-array>
+
+    <string-array name="thanhhoadist">
+        <item>Thanh Hoa</item>
+        <item>Bim Son</item>
+        <item>Sam Son</item>
+        <item>Muong Lat</item>
+        <item>Quan Hoa</item>
+        <item>Ba Thuoc</item>
+        <item>Quan Son</item>
+        <item>Lang Chanh</item>
+        <item>Ngoc Lac</item>
+        <item>Cam Thuy</item>
+        <item>Thach Thanh</item>
+        <item>Ha Trung</item>
+        <item>Vinh Loc</item>
+        <item>Yen Dinh</item>
+        <item>Tho Xuan</item>
+        <item>Thuong Xuan</item>
+        <item>Trieu Son</item>
+        <item>Thieu Hoa</item>
+        <item>Hoang Hoa</item>
+        <item>Hau Loc</item>
+        <item>Nga Son</item>
+        <item>Nhu Xuan</item>
+        <item>Nhu Thanh</item>
+        <item>Nong Cong</item>
+        <item>Dong Son</item>
+        <item>Quang Xuong</item>
+        <item>Tinh Gia</item>
+    </string-array>
+
+    <string-array name="ngheandist">
+        <item>Vinh</item>
+        <item>Cua Lo</item>
+        <item>Thai Hoa</item>
+        <item>Que Phong</item>
+        <item>Quy Chau</item>
+        <item>Ky Son</item>
+        <item>Tuong Duong</item>
+        <item>Nghia Dan</item>
+        <item>Quy Hop</item>
+        <item>Quynh Luu</item>
+        <item>Con Cuong</item>
+        <item>Tan Ky</item>
+        <item>Anh Son</item>
+        <item>Dien Chau</item>
+        <item>Yen Thanh</item>
+        <item>Do Luong</item>
+        <item>Thanh Chuong</item>
+        <item>Nghi Loc</item>
+        <item>Tam Dan</item>
+        <item>Hung Nguyen</item>
+        <item>Hoang Mai</item>
+    </string-array>
+
+    <string-array name="hatinhdist">
+        <item>Ha Tinh</item>
+        <item>Hong Linh</item>
+        <item>Huong Son</item>
+        <item>Duc Tho</item>
+        <item>Vu Quang</item>
+        <item>Nghi Xuan</item>
+        <item>Can Loc</item>
+        <item>Huong Khe</item>
+        <item>Thach Ha</item>
+        <item>Cam Xuyen</item>
+        <item>Ky Anh</item>
+        <item>Loc Ha</item>
+        <item>Ky Anh Town</item>
+    </string-array>
+
+    <string-array name="quangbinhdist">
+        <item>Dong Hoi</item>
+        <item>Minh Hoa</item>
+        <item>Tuyen Quang</item>
+        <item>Quang Trach</item>
+        <item>Bo Trach</item>
+        <item>Quang Ninh</item>
+        <item>Le Thuy</item>
+        <item>Ba Don</item>
+    </string-array>
+
+    <string-array name="quangtridist">
+        <item>Dong Ha</item>
+        <item>Quang Tri</item>
+        <item>Vinh Linh</item>
+        <item>Huong Hoa</item>
+        <item>Gio Linh</item>
+        <item>Da Krong</item>
+        <item>Cam Lo</item>
+        <item>Trieu Phong</item>
+        <item>Hai Lang</item>
+    </string-array>
+
+    <string-array name="thuathienhuedist">
+        <item>Hue</item>
+        <item>Phong Dien</item>
+        <item>Quang Dien</item>
+        <item>Phu Vang</item>
+        <item>Huong Thuy</item>
+        <item>Huong Tra</item>
+        <item>A Luoi</item>
+        <item>Phu Loc</item>
+        <item>Nam Dong</item>
+    </string-array>
+
+    <string-array name="danangdist">
+        <item>Lien Chieu</item>
+        <item>Thanh Khe</item>
+        <item>Hai Chau</item>
+        <item>Son Tra</item>
+        <item>Ngu Hanh Son</item>
+        <item>Cam Le</item>
+        <item>Hoa Vang</item>
+    </string-array>
+
+    <string-array name="quangnamdist">
+        <item>Tam Ky</item>
+        <item>Hoi An</item>
+        <item>Tay Giang</item>
+        <item>Dong Giang</item>
+        <item>Dai Loc</item>
+        <item>Dien Ban</item>
+        <item>Duy Xuyen</item>
+        <item>Que Son</item>
+        <item>Nam Giang</item>
+        <item>Phuoc Son</item>
+        <item>Hiep Duc</item>
+        <item>Thang Binh</item>
+        <item>Tien Phuoc</item>
+        <item>Bac Tra My</item>
+        <item>Nam Tra My</item>
+        <item>Nui Thanh</item>
+        <item>Phu Ninh</item>
+        <item>Nong Son</item>
+    </string-array>
+
+    <string-array name="quangngaidist">
+        <item>Quang Ngai</item>
+        <item>Binh Son</item>
+        <item>Tra Bong</item>
+        <item>Tay Tra</item>
+        <item>Son Tinh</item>
+        <item>Tu Nghia</item>
+        <item>Son Ha</item>
+        <item>Son Tay</item>
+        <item>Minh Long</item>
+        <item>Nghia Hanh</item>
+        <item>Mo Duc</item>
+        <item>Duc Pho</item>
+        <item>Ba To</item>
+        <item>Ly Son</item>
+    </string-array>
+
+    <string-array name="binhdinhdist">
+        <item>Qui Nhon</item>
+        <item>An Lao</item>
+        <item>Hoai Nhon</item>
+        <item>Hoai An</item>
+        <item>Phu My</item>
+        <item>Vinh Thanh</item>
+        <item>Tay Son</item>
+        <item>Phu Cat</item>
+        <item>An Nhon</item>
+        <item>Tuy Phuoc</item>
+        <item>Van Canh</item>
+    </string-array>
+
+    <string-array name="phuyendist">
+        <item>Tuy Hoa</item>
+        <item>Song Cau</item>
+        <item>Dong Xuan</item>
+        <item>Tuy An</item>
+        <item>Son Hoa</item>
+        <item>Song Hinh</item>
+        <item>Tay Hoa</item>
+        <item>Phu Hoa</item>
+        <item>Dong Hoa</item>
+    </string-array>
+
+    <string-array name="khanhhoadist">
+        <item>Nha Tranh</item>
+        <item>Cam Ranh</item>
+        <item>Cam Lam</item>
+        <item>Van Ninh</item>
+        <item>Ninh Hoa</item>
+        <item>Khanh Vinh</item>
+        <item>Dien Khanh</item>
+        <item>Khanh Son</item>
+        <item>Truong Sa</item>
+    </string-array>
+
+    <string-array name="ninhthuandist">
+        <item>Phan Rang - Thap Cham</item>
+        <item>Bac Ai</item>
+        <item>Ninh Son</item>
+        <item>Ninh Hai</item>
+        <item>Ninh Phuoc</item>
+        <item>Thuan Bac</item>
+        <item>Thuan Nam</item>
+    </string-array>
+
+    <string-array name="binhthuandist">
+        <item>Phan Thiet</item>
+        <item>La Gi</item>
+        <item>Tuy Phong</item>
+        <item>Bac Binh</item>
+        <item>Ham Thuan Bac</item>
+        <item>Ham Thuan Nam</item>
+        <item>Thanh Linh</item>
+        <item>Duc Linh</item>
+        <item>Ham Tan</item>
+        <item>Phu Qui</item>
+    </string-array>
+
+    <string-array name="kontumdist">
+        <item>Kon Tum</item>
+        <item>Dak Glei</item>
+        <item>Ngoc Hoi</item>
+        <item>Dak To</item>
+        <item>Kon Plong</item>
+        <item>Kon Ray</item>
+        <item>Dak Ha</item>
+        <item>Sa Thay</item>
+        <item>Tu Mo Rong</item>
+        <item>H\'Drai</item>
+    </string-array>
+
+    <string-array name="gialaidist">
+        <item>Pleiku</item>
+        <item>An Khe</item>
+        <item>Ayun Pa</item>
+        <item>KBang</item>
+        <item>Dak Doa</item>
+        <item>Chu Pah</item>
+        <item>la Grai</item>
+        <item>Mang Yang</item>
+        <item>Kong Chro</item>
+        <item>Duc Co</item>
+        <item>Chu Prong</item>
+        <item>Chu Se</item>
+        <item>Dak Po</item>
+        <item>la Pa</item>
+        <item>Krong Pa</item>
+        <item>Phu Thien</item>
+        <item>Chu Puh</item>
+    </string-array>
+
+    <string-array name="daklakdist">
+        <item>Buon Ma Thuot</item>
+        <item>Buon Ho</item>
+        <item>Ea H\'leo</item>
+        <item>Ea Sup</item>
+        <item>Buon Don</item>
+        <item>Cu M\'gar</item>
+        <item>Krong Buk</item>
+        <item>Krong Nang</item>
+        <item>Ea Kar</item>
+        <item>M\'Dak</item>
+        <item>Krong Bong</item>
+        <item>Kong Pac</item>
+        <item>Krong A Na</item>
+        <item>Lak</item>
+        <item>Cu Kuin</item>
+    </string-array>
+
+    <string-array name="daknongdist">
+        <item>Gia Nghia</item>
+        <item>Dak Glong</item>
+        <item>Cu Jut</item>
+        <item>Dak Mil</item>
+        <item>Krong No</item>
+        <item>Dak Song</item>
+        <item>Dak R\'Lap</item>
+        <item>Tuy Duc</item>
+    </string-array>
+
+    <string-array name="lamdongdist">
+        <item>Da Lat</item>
+        <item>Bao Loc</item>
+        <item>Dam Rong</item>
+        <item>Lac Duong</item>
+        <item>Lam Ha</item>
+        <item>Don Duong</item>
+        <item>Duc Trong</item>
+        <item>Di Linh</item>
+        <item>Bao Lam</item>
+        <item>Da Huoai</item>
+        <item tools:ignore="Typos">Da Teh</item>
+        <item>Cat Tien</item>
+    </string-array>
+
+    <string-array name="binhphuocdist">
+        <item>Phuoc Long</item>
+        <item>Dong Xoai</item>
+        <item>Binh Long</item>
+        <item>Bu Gia Map</item>
+        <item>Loc Ninh</item>
+        <item>Bu Dop</item>
+        <item>Hon Quan</item>
+        <item>Dong Phu</item>
+        <item>Bu Dang</item>
+        <item>Chon Thanh</item>
+        <item>Phu Rieng</item>
+    </string-array>
+
+    <string-array name="tayninhdist">
+        <item>Tay Ninh</item>
+        <item>Tan Bien</item>
+        <item>Tan Chau</item>
+        <item>Duong Minh Chau</item>
+        <item>Chau Thanh</item>
+        <item>Hoa Thanh</item>
+        <item>Go Dau</item>
+        <item>Ben Cau</item>
+        <item>Trang Bang</item>
+    </string-array>
+
+    <string-array name="binhduongdist">
+        <item>Thu Dau Mot</item>
+        <item>Bau Bang</item>
+        <item>Dau Tieng</item>
+        <item>Ben Cat</item>
+        <item>Phu Giao</item>
+        <item>Tan Uyen</item>
+        <item>Di An</item>
+        <item>Thuan An</item>
+        <item>Bac Tan Uyen</item>
+    </string-array>
+
+    <string-array name="dongnaidist">
+        <item>Bien Hoa</item>
+        <item>Long Khanh</item>
+        <item>Tan Phu</item>
+        <item>Vinh Cuu</item>
+        <item>Dinh Quan</item>
+        <item>Trang Bom</item>
+        <item>Thong Nhat</item>
+        <item>Cam My</item>
+        <item>Long Thanh</item>
+        <item>Xuan Loc</item>
+        <item>Nhon Trach</item>
+    </string-array>
+
+    <string-array name="hochiminhdist">
+        <item>District 1</item>
+        <item>District 2</item>
+        <item>District 3</item>
+        <item>District 4</item>
+        <item>District 5</item>
+        <item>District 6</item>
+        <item>District 7</item>
+        <item>District 8</item>
+        <item>District 9</item>
+        <item>District 10</item>
+        <item>District 11</item>
+        <item>District 12</item>
+        <item>Thu Duc</item>
+        <item>Go Vap</item>
+        <item>Binh Thanh</item>
+        <item>Tan Phu</item>
+        <item>Tan Binh</item>
+        <item>Phu Nhuan</item>
+        <item>Binh Tan</item>
+        <item>Cu Chi</item>
+        <item>Hoc Mon</item>
+        <item>Binh Chanh</item>
+        <item>Nha Be</item>
+        <item>Can Gio</item>
+    </string-array>
+
+    <string-array name="hanoidist">
+        <item>Ba Dinh</item>
+        <item>Hoan Kiem</item>
+        <item>Tay Ho</item>
+        <item>Long Bien</item>
+        <item>Cau Giay</item>
+        <item>Dong Da</item>
+        <item>Hai Ba Trung</item>
+        <item>Hoang Mai</item>
+        <item>Thanh Xuan</item>
+        <item>Soc Son</item>
+        <item>Dong Anh</item>
+        <item>Gia Lam</item>
+        <item>Nam Tu Liem</item>
+        <item>Thanh Tri</item>
+        <item>Bac Tu Liem</item>
+        <item>Me Linh</item>
+        <item>Ha Donh</item>
+        <item>Son Tay</item>
+        <item>Ba Vi</item>
+        <item>Phuc Tho</item>
+        <item>Dan Phuong</item>
+        <item>Hoai Duc</item>
+        <item>Quoc Oai</item>
+        <item>Thach That</item>
+        <item>Chuong My</item>
+        <item>Thanh Oai</item>
+        <item>Thuong Tin</item>
+        <item>Phu Xuyen</item>
+        <item>Ung Hoa</item>
+        <item>My Duc</item>
+    </string-array>
+
+    <string-array name="hagiangdist">
+        <item>Ha Giang</item>
+        <item>Dong Van</item>
+        <item>Meo Vac</item>
+        <item>Yen Minh</item>
+        <item>Quan Ba</item>
+        <item>Vi Xuyen</item>
+        <item>Bac Me</item>
+        <item>Hoang Su Phi</item>
+        <item>Xin Man</item>
+        <item>Bac Quang</item>
+        <item>Quang Binh</item>
+    </string-array>
+
+    <string-array name="caobangdist">
+        <item>Cao Bang</item>
+        <item>Bao Lam</item>
+        <item>Bao Lac</item>
+        <item>Thong Nong</item>
+        <item>Ha Quang</item>
+        <item>Tra Linh</item>
+        <item>Trung Khanh</item>
+        <item>Ha Lang</item>
+        <item>Quang Uyen</item>
+        <item>Phuc Hoa</item>
+        <item>Hoa An</item>
+        <item>Nguyen Binh</item>
+        <item>Thach An</item>
+    </string-array>
+
+    <string-array name="longandist">
+        <item>Tan An</item>
+        <item>Kien Tuong</item>
+        <item>Tan Hung</item>
+        <item>Vinh Hung</item>
+        <item>Moc Hoa</item>
+        <item>Tan Thanh</item>
+        <item>Thanh Hoa</item>
+        <item>Duc Hue</item>
+        <item>Duc Hoa</item>
+        <item>Ben Luc</item>
+        <item>Thu Thua</item>
+        <item>Tan Tru</item>
+        <item>Can Duoc</item>
+        <item>Can Giuoc</item>
+        <item>Chau Thanh</item>
+    </string-array>
+
+    <string-array name="tiengiangdist">
+        <item>My Tho</item>
+        <item>Go Cong</item>
+        <item>Cai Lay</item>
+        <item>Tan Phuoc</item>
+        <item>Cai Be</item>
+        <item>Cai Lay</item>
+        <item>Chau Thanh</item>
+        <item>Cho Gao</item>
+        <item>Go Cong Tay</item>
+        <item>Go Cong Dong</item>
+        <item>Go Tan Phu Dong</item>
+    </string-array>
+
+    <string-array name="bentredist">
+        <item>Ben Tre</item>
+        <item>Chau Thanh</item>
+        <item>Cho Lach</item>
+        <item>Mo Cay Nam</item>
+        <item>Giong Tom</item>
+        <item>Binh Dai</item>
+        <item>Ba Tri</item>
+        <item>Thach Phu</item>
+        <item>Mo Cay Bac</item>
+    </string-array>
+
+    <string-array name="vinhlongdits">
+        <item>Vinh Long</item>
+        <item>Long Ho</item>
+        <item>Mang Thit</item>
+        <item>Vung Liem</item>
+        <item>Tam Binh</item>
+        <item>Binh Minh</item>
+        <item>Tra On</item>
+        <item>Binh Tan</item>
+    </string-array>
+
+    <string-array name="travinhdist">
+        <item>Tra Vinh</item>
+        <item>Cang Long</item>
+        <item>Cau Ke</item>
+        <item>Tieu Can</item>
+        <item>Chau Thanh</item>
+        <item>Cau Ngang</item>
+        <item>Tra Cu</item>
+        <item>Duyen Hai</item>
+        <item>Duyen Hai Town</item>
+    </string-array>
+
+    <string-array name="dongthapdist">
+        <item>Cao Lanh City</item>
+        <item>Sa Dec</item>
+        <item>Hong Ngu Town</item>
+        <item>Tan Hong</item>
+        <item>Hong Ngu</item>
+        <item>Tam Nong</item>
+        <item>Thap Muoi</item>
+        <item>Cao Lanh</item>
+        <item>Thanh Binh</item>
+        <item>Lao Vo</item>
+        <item>Lai Vung</item>
+        <item>Chau Thanh</item>
+    </string-array>
+
+    <string-array name="kiengiangdist">
+        <item>Rach Gia</item>
+        <item>Ha Tien</item>
+        <item>Kien Luong</item>
+        <item>Hon Dat</item>
+        <item>Tan Hiep</item>
+        <item>Chau Thanh</item>
+        <item>Giong Rieng</item>
+        <item>Go Quao</item>
+        <item>An Bien</item>
+        <item>An Minh</item>
+        <item>Vinh Thuan</item>
+        <item>Phu Quoc</item>
+        <item>Kien Hai</item>
+        <item>U Minh Thuong</item>
+        <item>Giang Thanh</item>
+    </string-array>
+
+    <string-array name="canthodist">
+        <item>Ninh Kieu</item>
+        <item>O Mon</item>
+        <item>Binh Thuy</item>
+        <item>Cai Rang</item>
+        <item>Thot Not</item>
+        <item>Vinh Thanh</item>
+        <item>Co Do</item>
+        <item>Phong Dien</item>
+        <item>Thoi Lai</item>
+    </string-array>
+
+    <string-array name="haugiangdist">
+        <item>Vi Thanh</item>
+        <item>Nga Bay</item>
+        <item>Chau Thanh A</item>
+        <item>Chau Thanh</item>
+        <item>Phung Hiep</item>
+        <item>Vi Thuy</item>
+        <item>Long My</item>
+        <item>Long My Town</item>
+    </string-array>
+
+    <string-array name="soctrangdist">
+        <item>Soc Trang</item>
+        <item>Chau Thanh</item>
+        <item>Ke Sach</item>
+        <item>My Tu</item>
+        <item>Cu Lao Dung</item>
+        <item>Long Phu</item>
+        <item>My Xuyen</item>
+        <item>Nga Nam</item>
+        <item>Thanh Tri</item>
+        <item>Vinh Chau</item>
+        <item>Tran De</item>
+    </string-array>
+
+    <string-array name="camaudist">
+        <item>Ca Mau</item>
+        <item>U Minh</item>
+        <item>Thoi Binh</item>
+        <item>Tran Van Thoi</item>
+        <item>Cai Nuoc</item>
+        <item>Dam Doi</item>
+        <item>Nam Can</item>
+        <item>Phu Tan</item>
+        <item>Ngoc Hien</item>
+    </string-array>
+
+
+    <string-array name="type">
+        <item>Cat</item>
+        <item>Dog</item>
+    </string-array>
+    <!--Edit profile-->
+
+
+    <string name="image_content_description" translatable="false">Image Content Description</string>
+    <string name="toolbarTitle">Qr code scan</string>
+    <string name="txt_search_province">Province/ City</string>
+    <string name="txt_sterilized">Sterilized</string>
+    <string name="txt_unsterilized">Unsterilized</string>
+    <string name="txt_invalid_format_zipCode">Zip Code must contains six numbers.</string>
+    <string name="txt_error_exist" translatable="false">Data doesn\'t existed.</string>
+    <string name="txt_pro_danang" translatable="false">Đà Nẵng</string>
+    <string name="txt_error_resultList" translatable="false">Error at bundle data line in Basic Fragment.</string>
+    <string name="txt_not_have_fit_item">Sorry!!! Don\'t have any pet that meets your requirements.</string>
+    <string name="txt_loading">Loading...</string>
+    <string name="txt_pleaseWait">Please wait</string>
+    <string name="txt_nullData" translatable="false">Null Data</string>
+    <string name="txt_select_theme">Select Theme</string>
+    <string name="positive_option" translatable="false">OK</string>
+    <string name="negative_option">Cancle</string>
+    <string name="txt_location_failed" translatable="false">Failed saving users location</string>
+    <string name="txt_save_location_failed" translatable="false">"Saving failed: "</string>
+    <string name="txt_save_location_successful" translatable="false">Users locations saved successful on Firebase.</string>
+    <string name="dog">Dog</string>
+    <string name="txt_search_empty">Please fill out the search form to fins the pet that fit with your lifestyle</string>
+    <string name="txt_arrayList_size" translatable="false">"Size of array list: "</string>
+    <string name="txt_data_existed" translatable="false">Data existed.</string>
+    <string name="txt_error_province" translatable="true">Must select one item.</string>
+    <string name="txt_gender_profile">Gender: </string>
+    <string name="space" translatable="false">" "</string>
+    <string name="txt_contact">Contact</string>
+    <string name="subTitle_contact_dialog">Choose the method you want to contact with pet owner or shelter.</string>
+    <string name="txt_phone_method">Call</string>
+    <string name="txt_email_method">Send email</string>
+    <string name="mail_content" translatable="false">Mail Context</string>
+    <string name="shr_hint_subject">Subject</string>
+    <string name="shr_hint_emailBody">Email content</string>
+    <string name="send">Send</string>
+    <string name="subject">"Discuss about pet - "</string>
+    <string name="txt_title_email_intent">Send email...</string>
+    <string name="txt_error_intent_email" translatable="false">No email clients installed.</string>
+    <string name="txt_not_have_phoneNumber">Sorry, this user still doesn\'t provide his/her phonenumber. Please, contact he/she by email.</string>
+    <string name="btn_edit_pet">Update</string>
+    <string name="txt_successful_update">Successful updated pet information.</string>
+    <string name="txt_failure_update">Failure updated pet information</string>
+    <string name="txt_failed_downloadUrl" translatable="false">Get download URL failed!!</string>
+    <string name="txt_image_upload_failed" translatable="false">Upload image of pet failed</string>
+    <string name="txt_update">Update Pet Profile</string>
+    <string name="subTile_update_dialog">Do you want to update these information?</string>
+    <string name="subTile_remove_dialog">Are you sure remove this pet?</string>
+    <string name="txt_input_code" translatable="false">Code</string>
+    <string name="txt_btnShare" translatable="false">Share</string>
+    <string name="txt_btnJoin">Join</string>
+    <string name="txt_scanner_qr_code">Scan QR code</string>
+    <string name="txt_scanner_subTitle">Click on QR symbol  to scan please avoid shake to get code quickly.</string>
+    <string name="txt_petId" translatable="false">Pet ID</string>
+    <string name="txt_scan_result">Scan Result</string>
+    <string name="txt_ok" translatable="false">OK</string>
+    <string name="txt_call_error" translatable="false">You cannot call for yourself!!!</string>
+    <string name="txt_call_subject" translatable="false">"AdoPet- Call Video "</string>
+    <string name="txt_call_content" translatable="false">Let\'s type the following code to the Code fields in Call Screen of the AdoPet app to join the video call.</string>
+    <string name="create_pet">Lets create your pets !!!</string>
+    <string name="txt_unmatch_code">Please scan QR to get code or check your email to get it.</string>
+    <string name="call_vid">Call Video by Scan QR code</string>
+    <string name="txt_editProfile">Edit User Profile</string>
+    <string name="txt_fav_error">We\'re in development and we\'re really sorry about this</string>
+    <string name="link_github">khonganrau/Adoption_pet_app</string>
+    <string name="github">Github</string>
+    <string name="link_fb">Ma.Quynh.14</string>
+    <string name="facebook">Facebook</string>
+    <string name="instagram">_khonganrau</string>
+    <string name="email">quynhdmgcd17177@fpt.edu.vn</string>
+    <string name="aboutEmail">Email</string>
+    <string name="txt_connect_with_us">CONNECT WITH US!</string>
+    <string name="version">"Version "</string>
+    <string name="app_des">This is an application for a final year project</string>
+    <string name="txt_biometric_error">Unsupport biomectric finger.</string>
+    <string name="txt_error_call">You cannot call vid for yourself!!!</string>
+
+
+</resources>

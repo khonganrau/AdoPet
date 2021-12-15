@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Login Activity components -->
+    <dimen name="logo_icon_width">200dp</dimen>
+    <dimen name="logo_icon_height">200dp</dimen>
+    <dimen name="layout_marginTop">50dp</dimen>
+    <dimen name="elevation">10dp</dimen>
+
+    <!-- All Activity components -->
+    <dimen name="padding">16dp</dimen>
+
+    <!--
+Refer to App Widget Documentation for margin information
+http://developer.android.com/guide/topics/appwidgets/index.html#CreatingLayout
+    -->
+    <dimen name="widget_margin">0dp</dimen>
+
+</resources>

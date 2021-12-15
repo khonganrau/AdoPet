@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.View.PetProfileActivity">
+
+    <include
+        android:id="@+id/toolbarDetail"
+        layout="@layout/toolbar" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbarDetail"
+        android:fitsSystemWindows="true">
+
+        <ScrollView
+            android:id="@+id/sv_detail_profile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/lo_detail_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+
+                        android:id="@+id/petDetailImg"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_220sdp"
+                        tools:ignore="ContentDescription" />
+
+                    <LinearLayout
+                        android:id="@+id/lo_pet_name_breed_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="260dp"
+                        android:background="@drawable/custome_pet_info_profile"
+                        android:elevation="5dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvPetName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/nunito_extrabold"
+                                android:text="@string/txt_pet_name_age"
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                tools:ignore="NestedWeights" />
+
+                            <TextView
+                                android:id="@+id/tvPetBreed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="1"
+                                android:drawableLeft="@drawable/ic_baseline_pets_blue_24"
+                                android:drawablePadding="5dp"
+                                android:fontFamily="@font/nunito_regular"
+                                tools:text="@string/txt_pet_breed"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                tools:ignore="RtlHardcoded" />
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="10dp"
+                                android:orientation="horizontal">
+
+                                <com.airbnb.lottie.LottieAnimationView
+                                    android:id="@+id/lottie_location"
+                                    android:layout_width="@dimen/_25sdp"
+                                    android:layout_height="@dimen/_25sdp"
+                                    android:layout_gravity="center"
+                                    app:lottie_autoPlay="true"
+                                    app:lottie_loop="true"
+                                    app:lottie_rawRes="@raw/location" />
+
+                                <TextView
+                                    android:id="@+id/tvPetAddress"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tvPetBreed"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="@dimen/_3sdp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/nunito_regular"
+                                    tools:text="@string/txt_address"
+                                    android:textColor="@color/black"
+                                    android:textSize="15sp"
+                                    tools:ignore="InefficientWeight,ObsoleteLayoutParam" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/imgQRCode"
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="@dimen/_100sdp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_weight="1"
+                            android:fitsSystemWindows="true"
+                            tools:src="@drawable/qr_code"
+                            tools:ignore="ContentDescription,RtlHardcoded" />
+                    </LinearLayout>
+
+                </FrameLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@color/gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="horizontal"
+                    android:baselineAligned="false">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/vectorgender_icon"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:id="@+id/gender"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/nunito_regular"
+                            android:text="@string/txt_gender"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            tools:ignore="NestedWeights" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/hospital"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:id="@+id/steri"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/nunito_regular"
+                            android:paddingStart="5dp"
+                            android:text="@string/txt_sterilization"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            tools:ignore="NestedWeights,RtlSymmetry" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvAboutPet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/nunito_extrabold"
+                    android:text="@string/txt_about_pet"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/petDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/nunito_light"
+                    android:text="@string/txt_description"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:id="@+id/lo_rating"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/edittext_conner"
+                    android:elevation="20dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/lo_energy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <TextView
+                            android:id="@+id/txt_energy"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_weight="3"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="@string/txt_energy"
+                            android:textColor="@color/pink"
+                            android:textSize="15sp"
+                            tools:ignore="NestedWeights" />
+
+                        <LinearLayout
+                            android:id="@+id/lo_slider_energy"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.slider.Slider
+                                android:id="@+id/sliderEnergy"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:enabled="false"
+                                android:stepSize="1"
+                                android:valueFrom="0"
+                                android:valueTo="6" />
+
+                            <TextView
+                                android:id="@+id/sttEnergy"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:fontFamily="@font/nunito_light_italic"
+                                android:hint="@string/txt_status"
+                                android:textColor="@color/blue" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lo_activity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <TextView
+                            android:id="@+id/txt_activity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_weight="3"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="@string/txt_activityLevel"
+                            android:textColor="@color/pink"
+                            android:textSize="15sp"
+                            tools:ignore="NestedWeights" />
+
+                        <LinearLayout
+                            android:id="@+id/lo_slider_activity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.slider.Slider
+                                android:id="@+id/sliderActivity"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:enabled="false"
+                                android:stepSize="1"
+                                android:valueFrom="0"
+                                android:valueTo="6" />
+
+                            <TextView
+                                android:id="@+id/sttActivity"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:fontFamily="@font/nunito_light_italic"
+                                android:hint="@string/txt_status"
+                                android:textColor="@color/blue" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lo_playful"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <TextView
+                            android:id="@+id/txt_playfull"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_weight="3"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="@string/txt_playfull"
+                            android:textColor="@color/pink"
+                            android:textSize="15sp"
+                            tools:ignore="NestedWeights" />
+
+                        <LinearLayout
+                            android:id="@+id/lo_slider_playfull"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.slider.Slider
+                                android:id="@+id/sliderPlayfull"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:enabled="false"
+                                android:stepSize="1"
+                                android:valueFrom="0"
+                                android:valueTo="6" />
+
+                            <TextView
+                                android:id="@+id/sttPlayfull"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:fontFamily="@font/nunito_light_italic"
+                                android:hint="@string/txt_status"
+                                android:textColor="@color/blue" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lo_affection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <TextView
+                            android:id="@+id/txt_affection"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_weight="3"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="@string/txt_affection"
+                            android:textColor="@color/pink"
+                            android:textSize="15sp"
+                            tools:ignore="NestedWeights" />
+
+                        <LinearLayout
+                            android:id="@+id/lo_slider_affection"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.slider.Slider
+                                android:id="@+id/sliderAffection"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:enabled="false"
+                                android:stepSize="1"
+                                android:valueFrom="0"
+                                android:valueTo="6" />
+
+                            <TextView
+                                android:id="@+id/sttAffection"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:fontFamily="@font/nunito_light_italic"
+                                android:hint="@string/txt_status"
+                                android:textColor="@color/blue" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lo_training"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <TextView
+                            android:id="@+id/txt_training"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_weight="3"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="@string/txt_training"
+                            android:textColor="@color/pink"
+                            android:textSize="15sp"
+                            tools:ignore="NestedWeights" />
+
+                        <LinearLayout
+                            android:id="@+id/lo_slider_training"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:layout_weight="2"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.slider.Slider
+                                android:id="@+id/sliderTraining"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:enabled="false"
+                                android:stepSize="1"
+                                android:valueFrom="0"
+                                android:valueTo="6" />
+
+                            <TextView
+                                android:id="@+id/sttTraining"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:fontFamily="@font/nunito_light_italic"
+                                android:hint="@string/txt_status"
+                                android:textColor="@color/blue" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="100dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvUserName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_baseline_account_box_24_blue"
+                            android:drawablePadding="8dp"
+                            android:fontFamily="@font/nunito_extrabold"
+                            android:textColor="@color/blue"
+                            android:textSize="18sp"
+                            tools:ignore="RtlHardcoded" />
+
+                        <TextView
+                            android:id="@+id/numberPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_baseline_call_24_blue"
+                            android:drawablePadding="8dp"
+                            android:fontFamily="@font/nunito_light_italic"
+                            android:textColor="@color/blue"
+                            android:textSize="13sp"
+                            tools:ignore="RtlHardcoded" />
+
+                        <TextView
+                            android:id="@+id/email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_baseline_email_24_blue"
+                            android:drawablePadding="8dp"
+                            android:fontFamily="@font/nunito_light_italic"
+                            android:textColor="@color/blue"
+                            android:textSize="10sp"
+                            tools:ignore="RtlHardcoded,SmallSp" />
+
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btnContact"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_conner"
+                        android:fontFamily="@font/nunito_bold"
+                        android:gravity="center"
+                        android:text="@string/btn_contact" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnFavorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="120dp"
+            android:layout_marginBottom="20dp"
+            android:elevation="6dp"
+            app:backgroundTint="@color/pink"
+            app:elevation="10dp"
+            app:srcCompat="@drawable/ic_baseline_favorite_24"
+            tools:ignore="ContentDescription,RtlHardcoded" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="100dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:contentDescription="@string/txt_share_floating_btn"
+            android:elevation="6dp"
+            app:backgroundTint="@color/pink"
+            app:elevation="10dp"
+            app:srcCompat="@drawable/ic_baseline_share_24"
+            tools:ignore="RtlHardcoded" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</RelativeLayout>
